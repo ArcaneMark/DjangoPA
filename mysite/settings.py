@@ -25,7 +25,9 @@ SECRET_KEY = 'k^j5(1_5_z7d_vn%8lgt!nz*!2imp^g0j$!))6mibfri3f&xt%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "arcanemark.pythonanywhere.com",
+]
 
 
 # Application definition
@@ -81,13 +83,24 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'DjangoTutorial',
+#         'USER': 'SuperMark',
+#         'PASSWORD': 'letmeenter@dear',
+#         'HOST': '35.240.201.48',
+#         'PORT': ''
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'DjangoTutorial',
-        'USER': 'SuperMark',
-        'PASSWORD': 'letmeenter@dear',
-        'HOST': '35.240.201.48',
+        'NAME': 'ArcaneMark$DjangoTutorialDB',
+        'USER': 'ArcaneMark',
+        'PASSWORD': 'iamhandsom3@mysql',
+        'HOST': 'ArcaneMark.mysql.pythonanywhere-services.com',
         'PORT': ''
     }
 }
