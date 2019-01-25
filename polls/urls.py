@@ -17,12 +17,12 @@ app_name = 'polls'
 # ]
 urlpatterns = [
     #the name or 3rd parameter is very useful in your template file in using the {% url %} template tag
-
+    path('design/', views.IndexDesignView.as_view(), name='indexD'), #my design page
     path('polls/', views.IndexView.as_view(), name='index'), #my polls index page
     path('<int:pk>/', views.DetailView.as_view(), name='detail'), #/polls/3
     path('<int:pk>/results/', views.ResultsView.as_view(), name='results'), #/polls/3/results/
     path('<int:question_id>/vote/', views.vote, name='vote'), #/polls/3/vote/
 
-    path('', views.IndexDesignView.as_view(), name='indexD'), #my design page
+
 
 ]

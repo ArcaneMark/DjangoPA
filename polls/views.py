@@ -29,7 +29,7 @@ from django.utils import timezone
 #     return render(request,'polls/index.html',context)
 
 class IndexDesignView(generic.ListView):
-    template_name = 'Design/index.html'
+    template_name = 'design/index.html'
     def get_queryset(self):
         """Return the last five published questions. """
         return True
