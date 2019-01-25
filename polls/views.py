@@ -1,10 +1,11 @@
 from django.shortcuts import render,get_object_or_404
 
 # Create your views here.
-from django.http import HttpResponse, HttpResponseRedirect
+#from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from .models import Question, Choice
-from django.template import loader
-from django.http import Http404
+#from django.template import loader
+#from django.http import Http404
 from django.urls import reverse
 from django.views import generic
 
@@ -26,6 +27,12 @@ from django.utils import timezone
 #         'latest_question_list': latest_question_list,
 #     }
 #     return render(request,'polls/index.html',context)
+
+class IndexDesignView(generic.ListView):
+    template_name = 'Design/index.html'
+    def get_queryset(self):
+        """Return the last five published questions. """
+        return True
 
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
