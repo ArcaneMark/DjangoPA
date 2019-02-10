@@ -1,70 +1,71 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  /*padding: 0;*/
-  /*margin: 0;*/
-  /*border: 0;*/
 }
 
-.grid-wrapper {
-    display: grid;
-    margin: 15px 0 15px 0;
-    grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
-    grid-gap: 0px;
-}
-
-h2 {
-    text-align: center;
-}
-
-nav {
-  width: 100%;
-  margin: 0 auto;
-  background: #fff;
-}
-
-nav ul {
-  display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) );;
-  list-style: none;
+.center {
   text-align: center;
 }
 
-nav ul li {
-  display: inline-block;
+.grid-nav-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 0px;
 }
 
-nav ul li a {
-  display: block;
+.gray1 {
+  margin: 5px 0 5px 0;
+  color: #343434;
+  font-weight: normal;
+  font-family: 'Ultra', sans-serif;
+  font-size: 36px;
+  line-height: 42px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 	white, 0 3px #777;
+}
+
+.gray1 a {
+  text-decoration: none;
+  color: #343434;
+}
+
+.gray1 a:after {
+  color: #343434;
+}
+
+.grid-nav-element {
+  padding: 5px 0 5px 0;
+}
+.grid-nav-element a {
   text-decoration: none;
   color: #808080;
-  margin: 0 10px;
 }
 
-nav ul li a,
-nav ul li a:after,
-nav ul li a:before {
+.nav-bar-text a,
+.nav-bar-text a:after,
+.nav-bar-text a:before {
   transition: all .5s;
 }
 
-nav.shift ul li a {
+.nav-bar-text a {
   position: relative;
   font-weight: 550;
-  text-align: center;
-  padding: 4px 6px;
+  padding: 7px 50px 7px 50px;
   z-index: 1;
 }
 
-nav.shift ul li a:hover {
+.nav-bar-text a:hover {
   color: #AACCFF;
 }
 
-nav.shift ul li a:after {
+.nav-bar-text a:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -81,10 +82,11 @@ nav.shift ul li a:after {
   z-index: -1;
 }
 
-nav.shift ul li a:hover:after {
+.nav-bar-text a:hover:after {
   opacity: 1;
   visibility: visible;
-  height: 150%;
+  height: 120%;
+  width: 100%;
 }
 
 hr.separator {
